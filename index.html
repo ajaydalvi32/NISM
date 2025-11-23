@@ -143,64 +143,6 @@
             margin-top: 8px;
         }
         
-        .language-section {
-            background: #fff3cd;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 25px 0;
-            text-align: center;
-        }
-        
-        .language-title {
-            font-weight: 700;
-            color: #856404;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        
-        .languages {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .language-tag {
-            background: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            border: 2px solid #ffc107;
-        }
-        
-        .contact-method {
-            background: #e7f3ff;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        
-        .contact-title {
-            font-weight: 700;
-            color: #2563eb;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        
-        .phone-number {
-            font-size: 24px;
-            font-weight: 800;
-            color: #28a745;
-            margin: 10px 0;
-        }
-        
-        .instructions {
-            font-size: 14px;
-            color: #666;
-            margin-top: 10px;
-        }
-        
         .faq {
             margin-top: 30px;
             text-align: left;
@@ -230,16 +172,6 @@
             <div class="logo">NISM Series VIII</div>
             <div class="tagline">Pass NISM Series VIII: Equity Derivatives Certification Examination. Guaranteed*</div>
             
-            <!-- Language Support -->
-            <div class="language-section">
-                <div class="language-title">Available in Multiple Languages</div>
-                <div class="languages">
-                    <div class="language-tag">English</div>
-                    <div class="language-tag">Hindi</div>
-                    <div class="language-tag">Marathi</div>
-                </div>
-            </div>
-            
             <!-- Pricing -->
             <div class="pricing">
                 <div class="price">₹999</div>
@@ -248,7 +180,7 @@
             
             <!-- 7-Day Plan -->
             <div class="plan">
-                <strong>7-Day Success Plan:</strong> Daily Live 1v1 Lectures + mock tests + doubt support
+                <strong>7-Day Success Plan:</strong> Daily 1v1 Live Lectures + mock tests + doubt support
             </div>
             
             <!-- Features -->
@@ -269,19 +201,14 @@
                 <div class="audience-item">Learners who want to measure and improve their knowledge with structured guidance</div>
             </div>
             
-            <!-- Contact Method -->
-            <div class="contact-method">
-                <div class="contact-title">For Enrollment Contact:</div>
-                <div class="phone-number">93596 32703</div>
-                <div class="instructions">
-                    📱 Save this number and send "NISM 8" on WhatsApp<br>
-                    📞 Or call directly for more information
-                </div>
-            </div>
-            
             <!-- CTA -->
-            <button class="cta-button" onclick="copyPhoneNumber()">📞 Copy Phone Number</button>
-            <div class="guarantee">we won't let you fail</div>
+            <a href="https://wa.me/919359632703?text=Hello!%20I%20want%20to%20enroll%20in%20NISM%20Series%208%207-Day%20Program%20for%20₹999" 
+            target="_blank" 
+            class="cta-button" 
+            style="text-decoration: none; display: block;">
+            📱 Chat on WhatsApp for Enrollment
+            </a>
+            <div class="guarantee">We won't let you fail</div>
             
             <!-- How It Works -->
             <div class="faq">
@@ -296,24 +223,11 @@
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">Language support?</div>
-                    <div class="faq-answer">Course available in English, Hindi, and Marathi - choose your preferred language</div>
+                    <div class="faq-question">Success rate?</div>
+                    <div class="faq-answer">94% of our students pass in first attempt with 7-day program</div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        function copyPhoneNumber() {
-            const phoneNumber = "9359632703";
-            navigator.clipboard.writeText(phoneNumber).then(function() {
-                alert("Phone number copied! Please save it and send 'NISM 8' on WhatsApp");
-            }).catch(function() {
-                alert("Please note down: 93596 32703 - Send 'NISM 8' on WhatsApp");
-            });
-        }
-        
-        document.querySelector('.cta-button').addEventListener('click', copyPhoneNumber);
-    </script>
 </body>
 </html>
