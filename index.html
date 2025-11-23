@@ -1,154 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reality Check - What We Want vs What We Get</title>
-
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin:0;
-  padding:0;
-  background:#f2f2f2;
-  color:#222;
-}
-header {
-  background:#111;
-  color:#fff;
-  padding:25px;
-  text-align:center;
-  font-size:22px;
-}
-.subtitle {
-  font-size:14px;
-  color:#aaaaaa;
-  margin-top:5px;
-}
-.container {
-  max-width:900px;
-  margin:30px auto;
-  background:#fff;
-  border-radius:6px;
-  padding:20px;
-  box-shadow:0 3px 12px rgba(0,0,0,0.1);
-}
-table {
-  width:100%;
-  border-collapse:collapse;
-}
-th, td {
-  border:1px solid #ddd;
-  padding:12px;
-  text-align:left;
-}
-th {
-  background:#ff9f1c;
-  color:#fff;
-  font-size:18px;
-}
-tr:nth-child(even) {background:#fafafa;}
-tr:hover {background:#f1f1f1;}
-.footer {
-  margin-top:40px;
-  background:#111;
-  color:#fff;
-  text-align:center;
-  padding:25px 10px;
-  font-size:18px;
-}
-.whatsapp-btn {
-  display:inline-block;
-  background:#25D366;
-  color:#fff;
-  padding:12px 22px;
-  border-radius:8px;
-  text-decoration:none;
-  margin-top:15px;
-  font-weight:bold;
-  font-size:16px;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NISM 8 - 7 Day Pass Guarantee</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .pricing {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #28a745;
+        }
+        
+        .period {
+            color: #666;
+            font-size: 18px;
+        }
+        
+        .plan {
+            background: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .features {
+            text-align: left;
+            margin: 25px 0;
+        }
+        
+        .feature {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .audience {
+            background: #f0f7ff;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .audience-title {
+            font-weight: 700;
+            color: #2563eb;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .audience-item {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .audience-item:before {
+            content: "🎯";
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        
+        .cta-button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            margin: 20px 0 8px 0;
+        }
+        
+        .cta-button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        
+        .guarantee {
+            color: #666;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        
+        .language-section {
+            background: #fff3cd;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .language-title {
+            font-weight: 700;
+            color: #856404;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .languages {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .language-tag {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            border: 2px solid #ffc107;
+        }
+        
+        .contact-method {
+            background: #e7f3ff;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-weight: 700;
+            color: #2563eb;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .phone-number {
+            font-size: 24px;
+            font-weight: 800;
+            color: #28a745;
+            margin: 10px 0;
+        }
+        
+        .instructions {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        .faq {
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .faq-answer {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="card">
+            <!-- Header -->
+            <div class="logo">NISM Series VIII</div>
+            <div class="tagline">Pass NISM Series VIII: Equity Derivatives Certification Examination. Guaranteed*</div>
+            
+            <!-- Language Support -->
+            <div class="language-section">
+                <div class="language-title">Available in Multiple Languages</div>
+                <div class="languages">
+                    <div class="language-tag">English</div>
+                    <div class="language-tag">Hindi</div>
+                    <div class="language-tag">Marathi</div>
+                </div>
+            </div>
+            
+            <!-- Pricing -->
+            <div class="pricing">
+                <div class="price">₹999</div>
+                <div class="period">7-Day Intensive Program</div>
+            </div>
+            
+            <!-- 7-Day Plan -->
+            <div class="plan">
+                <strong>7-Day Success Plan:</strong> Daily Live 1v1 Lectures + mock tests + doubt support
+            </div>
+            
+            <!-- Features -->
+            <div class="features">
+                <div class="feature">7-day structured study plan</div>
+                <div class="feature">Daily 1v1 video lessons (1-2 Hrs)</div>
+                <div class="feature">Chapter-wise mock tests</div>
+                <div class="feature">WhatsApp doubt support</div>
+                <div class="feature">Final exam simulation</div>
+            </div>
 
-<header>
-  REALITY CHECK – WHAT WE WANT vs WHAT WE GET
-  <div class="subtitle">Think With Awareness, Not Emotion</div>
-</header>
+            <!-- Who is this course for? -->
+            <div class="audience">
+                <div class="audience-title">Who is this course for?</div>
+                <div class="audience-item">Beginners who want to learn the stock market step‑by‑step</div>
+                <div class="audience-item">Students preparing for NISM certifications (especially NISM 8)</div>
+                <div class="audience-item">Aspiring Equity Dealers/Traders wanting fast-track support</div>
+                <div class="audience-item">Learners who want to measure and improve their knowledge with structured guidance</div>
+            </div>
+            
+            <!-- Contact Method -->
+            <div class="contact-method">
+                <div class="contact-title">For Enrollment Contact:</div>
+                <div class="phone-number">93596 32703</div>
+                <div class="instructions">
+                    📱 Save this number and send "NISM 8" on WhatsApp<br>
+                    📞 Or call directly for more information
+                </div>
+            </div>
+            
+            <!-- CTA -->
+            <button class="cta-button" onclick="copyPhoneNumber()">📞 Copy Phone Number</button>
+            <div class="guarantee">we won't let you fail</div>
+            
+            <!-- How It Works -->
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">How it works?</div>
+                    <div class="faq-answer">Day 1-2: Core concepts | Day 3-5: Advanced topics | Day 6-7: Revision & mock tests</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Why this works?</div>
+                    <div class="faq-answer">Focused content eliminates 80% irrelevant syllabus. Only what's needed to pass.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Language support?</div>
+                    <div class="faq-answer">Course available in English, Hindi, and Marathi - choose your preferred language</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="container">
-<table>
-  <tr>
-    <th>What We Want</th>
-    <th>What We Are Getting</th>
-  </tr>
-
-  <tr><td>1) Roads</td><td>Broken,potholes,People are dying = Government don't care</td></tr>
-  <tr><td>2) Hospitals</td><td>Lack of beds, medicines, doctors, and facilities = Government don't care </td></tr>
-  <tr><td>3) Schools</td><td>Lack of Resources,Quality, Govt school shutting down = Government don't care</td></tr>
-  <tr><td>4) Public Transport</td><td>Unsafe condtion, delay, Overcrowded, People are dying = Government don't care</td></tr>
-  <tr><td>5) Drinking Water</td><td> Polluted water, irregular supply, struggle in summer = Government don't care</td></tr>
-  <tr><td>6) Job opportunities</td><td> Unemployment, underpaid work = Government don't care</td></tr>
-  <tr><td>7) Women safety</td><td> Harassment, unsafe areas,Rapes = Government don't care</td></tr>
-  <tr><td>8) Government services</td><td> Slow processing, corruption, and unnecessary paperwork= Government Don't care</td></tr>
-  <tr><td>9) Public toilets</td><td> Don't exist, those exist locked,dirty,unsafe to use = Government don't care</td></tr>
-  <tr><td>10) Garbage</td><td> No timely cleaning, no management,lack of strict laws = Government don't care</td></tr>
-  <tr><td>11) Traffic</td><td> Daily jams, no planning, no traffic discipline = Government don't care</td></tr>
-  <tr><td>12) Government spending</td><td>No clarity, peak corruption = Government don't care</td></tr>
-  <tr><td>13) Respect for every citizen</td><td> Complaints ignored, no helplines that work = Government don't care</td></tr>
-  <tr><td>14) Fuel prices</td><td> Petrol, diesel, gas prices rising continuously = Government don't care</td></tr>
-  <tr><td>15) Air</td><td> Pollution increasing every year = Government don't care</td></tr>
-  <tr><td>16) Unity among people</td><td> Divide, hate, religion-based politics = Government don't care</td></tr>
-  <tr><td>17) Justice</td><td> For common people its joke = Government don't care </td></tr>
-  <tr><td>18) Housing</td><td> House & rent costs rose too high, not single option = Government don't care</td></tr>
-  <tr><td>19) Public Safety</td><td> No street lights, dark unsafe roads, No CCTV = Government don't care</td></tr>
-  <tr><td>20) Flood & Drainage System</td><td>Small rains flood roads, water logging, bad infra = Government don't care</td></tr>
-  <tr><td>21) Food Quality</td><td>Low-quality meals, unhygienic food, no standard = Government don't care</td></tr>
-  <tr><td>22) Leaders</td><td>With murder, rape, corruption cases can become MLA/MP = Government don't care</td></tr>
-  <tr><td>23) Rich/Poor</td><td> One develops, one suffers = Government don't care</td></tr>
-  <tr><td>24) Media</td><td>Hiding real problems, distractions, propaganda = Government don't care</td></tr>
-  <tr><td>25) Tax</td><td> High taxes but no basic services = Government don't care</td></tr>
-  <tr><td>26) Vote</td><td>Vote buying and manipulation is normal = Government don't care </td></tr>
-  <tr><td>27) Govt exam</td><td> Exam paper leaks again and again, students lose years = Government don't care</td></tr>
-  <tr><td>28) Innovation</td><td>Shallow schemes for vote bank, no real development = Government don't care</td></tr>
-  <tr><td>29) Youth support</td><td> Talent gets no support or funding = Government don't care</td></tr>
-  <tr><td>30) Corruption</td><td>Bribe needed for everything = Government don't care</td></tr>
-
-</table>
-</div>
-
-<div style="max-width:900px; margin:25px auto; padding:20px; background:#fff; border-radius:6px; box-shadow:0 3px 12px rgba(0,0,0,0.1); font-size:17px; line-height:26px;">
-  <b>Our Thoughts:</b><br><br>
-  We are not against any political party, and we are not in support of any party either. Our only concern is the quality of life of ordinary citizens. 
-We deserve good roads, clean drinking water, reliable healthcare, safe public spaces, and a system that respects common people.
-
-Some people argue that citizens lack civic sense but civic sense also grows when the government sets strong rules, enforces them strictly, and leads by example. 
-If there are clear laws and meaningful penalties, people will think twice before ignoring responsibility. 
-Change must start from leadership.
-
-We are not asking for luxury, only basic dignity. 
-Voting is our power let us use it with awareness, not emotion. 
-Before choosing anyone, simply look around your own city and your own life situation.
-
-Many people are aware of the issues but feel there are no better options. 
-But if we stop demanding better, things will never improve. 
-If we don’t raise our voice today, we will regret tomorrow.
-
-At last government don't care of your single person, but these single person life is very precious when the person is from our home.
-</div>
-<div style="max-width:900px; margin:10px auto; text-align:right; font-size:14px; color:#555; padding-right:10px;">
-    <i>Note: I am also looking for a job opportunity as a fresher in <b>Power Platform</b>. 
-    If you know any openings, kindly inform or refer. Thank you.</i>
-  </div>
-  
-<div class="footer">
-  Join our WhatsApp Broadcast to Support This Movement  
-  <br>
-  <a class="whatsapp-btn" href="https://whatsapp.com/channel/0029Vb7Cjnb30LKHSXQjnb0o" target="_blank">Join WhatsApp Channel</a><br><br>
-  © 2025 Citizen Reality Project
-</div>
-
+    <script>
+        function copyPhoneNumber() {
+            const phoneNumber = "9359632703";
+            navigator.clipboard.writeText(phoneNumber).then(function() {
+                alert("Phone number copied! Please save it and send 'NISM 8' on WhatsApp");
+            }).catch(function() {
+                alert("Please note down: 93596 32703 - Send 'NISM 8' on WhatsApp");
+            });
+        }
+        
+        document.querySelector('.cta-button').addEventListener('click', copyPhoneNumber);
+    </script>
 </body>
 </html>
